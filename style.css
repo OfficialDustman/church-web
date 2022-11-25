@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all .2s ease;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a, a:link, a:visited {
+    color: darkblue;
+    text-decoration: none;
+}
+
+header {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+header.scroll {
+    background-color: white;
+    border-bottom: 2px solid red;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+header img {
+    padding-top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav .fa-bars, nav .fa-close {
+    display: none;
+    color: darkblue;
+    font-size: larger;
+}
+
+nav i:hover {
+    border: none;
+    padding: 0.5rem;
+    outline: 2px solid red;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkblue;
+    letter-spacing: 2px;
+}
+
+ul a {
+    font-size: smaller;
+    font-weight: bold;
+    color: white !important;
+}
+
+ul a.scroll {
+    color: darkblue !important;
+}
+
+ul a:last-child {
+    background-color: darkblue;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 2rem;
+}
+
+ul a:last-child.scroll {
+    color: white !important;
+}
+
+ul a.active, ul a:hover {
+    border-radius: 2rem;
+    padding: 0.5rem;
+    font-size: medium;
+    outline: 2px solid red;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkblue;
+    letter-spacing: 2px;
+}
+
+.swiper {
+    /* margin-top: -6rem;
+    z-index: -1; */
+}
+
+.swiper-slide img {
+    height: 100vh;
+    width: 100%;
+}
+
+@media screen and (max-width : 1025px) {
+   header {
+        flex-direction: column;
+        padding-bottom: 1rem;
+   }
+
+}
+
+@media screen and (max-width : 765px) {
+    header {
+        flex-direction: row;
+    }
+
+    nav ul {
+        display: none;
+        /* position: absolute;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        margin-top: 4rem; */
+    }
+
+    nav .fa-bars {
+        display: inline-block;
+    }
+
+    nav ul.active{
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+
+    nav .fa-close {
+        display: inline-block;
+        font-size: x-large;
+    }
+
+}
