@@ -116,7 +116,7 @@ ul a.active, ul a:hover {
     }
 
     header img {
-        width: 50%;
+        width: 75%;
     }
 
     nav ul {
@@ -147,7 +147,7 @@ ul a.active, ul a:hover {
     }
 
     .swiper-slide img {
-        height: 16.875rem;
+        height: 50vh;
     }
 
 }
