@@ -5,7 +5,7 @@ const navBar = document.querySelector('.fa-bars'),
       header = document.querySelector('header'),
       headerLinks = document.querySelectorAll('ul a');
 
-console.log(headerLinks);
+// console.log(headerLinks);
 
 
 navBar.onclick = function() {
@@ -53,4 +53,15 @@ var swiper = new Swiper("#home", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+});
+
+var swiper = new Swiper("#events", {
+  loop: true,
+  slidesPerView: 3,
+      slidesPerColumn: 2,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
 });
