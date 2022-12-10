@@ -9,6 +9,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 a, a:link, a:visited {
@@ -192,6 +195,104 @@ ul a.active, ul a:hover {
 video {
     width: 100%;
 }
+
+#values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto;
+    color: lightslategray;
+    gap: 0.7rem;
+}
+
+#values h1, #values h2 {
+    color: darkblue;
+    text-decoration: underline;
+    text-decoration-color: darkblue;
+}
+
+#values h1:hover, #values h2:hover {
+    color: red;
+}
+
+#values div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.mission {
+    align-self: flex-start;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.review h1 {
+    color: darkblue;
+    text-decoration: underline;
+    text-decoration-color: darkblue;
+}
+
+.review h1, .review h3 {
+    align-self: center;
+}
+.review h1:hover {
+    color: red;
+}
+
+.review .slide{
+    padding:2rem;
+    box-shadow:var(--box-shadow);
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    position: relative;    
+}
+
+.review .slide .fa-quote-right{
+    position: absolute;
+    top:2rem; right:2rem;
+    font-size: 6rem;
+    color:#ccc;
+}
+
+.review .slide .user{
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.review .slide .user img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .slide .user h3{
+    color:var(--black);
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+
+.review .slide .user i{
+    font-size: 1.3rem;
+    color:var(--green);
+}
+
+.review .slide p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color:var(--light-color);
+}
+
 
 @media screen and (max-width : 1025px) {
    header {
