@@ -9,9 +9,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2rem; */
 }
 
 a, a:link, a:visited {
@@ -95,6 +95,10 @@ ul a.active, ul a:hover {
     letter-spacing: 2px;
 }
 
+section {
+    margin-bottom: 1rem !important;
+}
+
 .swiper {
     /* margin-top: -6rem;
     z-index: -1; */
@@ -161,6 +165,7 @@ ul a.active, ul a:hover {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 50%;
 }
 
 
@@ -183,6 +188,7 @@ ul a.active, ul a:hover {
 
 .gal-more  h1{
     font-size: xxx-large;
+    align-self: flex-start;
 }
 
 .gal-more a {
@@ -232,6 +238,7 @@ video {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+    overflow-x: hidden;
 }
 
 .review h1 {
@@ -257,9 +264,10 @@ video {
 
 .review .slide .fa-quote-right{
     position: absolute;
-    top:2rem; right:2rem;
-    font-size: 6rem;
-    color:#ccc;
+    top: 1rem;
+    right: 2rem;
+    font-size: 5.5rem;
+    color: lightslategray;
 }
 
 .review .slide .user{
@@ -277,18 +285,23 @@ video {
 }
 
 .review .slide .user h3{
-    color:var(--black);
-    font-size: 2rem;
+    color: darkblue;
+    font-size: 1.5rem;
     padding-bottom: .5rem;
+    text-transform: capitalize;
+}
+
+.review .slide .user .stars{
+    color: red;
 }
 
 .review .slide .user i{
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     color:var(--green);
 }
 
 .review .slide p{
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.8;
     color:var(--light-color);
 }
@@ -339,6 +352,10 @@ video {
         font-size: x-large;
     }
 
+    #events {
+        height: auto;
+    }
+
     .swiper-slide img {
         height: 50vh;
     }
@@ -349,8 +366,26 @@ video {
     }
 
     .project-sample {
+        justify-content: space-around;
         width: 100% !important;
     }
-    
 
+    .swiper-pagination {
+        display: none;
+    }
+    
+    
+    #gallery {
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #gallery > img {
+        width: 75%;
+    }
+
+    .galleria {
+        width: 100%;
+    }
 }
