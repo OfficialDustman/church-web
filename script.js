@@ -90,3 +90,59 @@ var swiper = new Swiper(".review-slider", {
     },
   },
 });
+
+
+//for responsiveness
+const responsive = window.matchMedia("(max-width: 765px)");
+const projectSamples = document.querySelectorAll('.project-sample ');
+const filteredElements = [...projectSamples].slice(3);  // get elements from index 3 until the end of the array
+const filteredDuplicateElements = [...filteredElements
+].slice(6);  // get elements from index 6 until the end of the array
+const seeMore = document.querySelector('.see-events ');
+const seeALl = document.querySelector('.all-events ');
+
+// console.log(projectSamples);
+console.log(filteredElements);
+console.log(filteredDuplicateElements);
+
+
+function listen(responsive) {
+
+  if (responsive.matches) { 
+
+    filteredElements.forEach((element, i) => {
+      element.style.display = "none";
+    });
+
+    seeMore.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log(seeMore.textContent);
+      filteredDuplicateElements.forEach((element, i) => {
+        element.classList.toggle('sub-active');
+      });
+
+      filteredElements.forEach((element, i) => {
+        element.classList.toggle('active');
+      });
+
+      seeALl.classList.toggle('active');
+
+      if (seeMore.textContent === "See More") {
+        seeMore.textContent = "See Less"; 
+      } else {
+        seeMore.textContent = "See More"; 
+      }
+            
+    });
+
+  } else {
+    filteredElements.forEach(element => {
+      element.style.display = "flex";
+    });
+  }
+}
+
+listen(responsive)
+responsive.addListener(listen)
+
+
