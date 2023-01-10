@@ -63,28 +63,28 @@ nav i:hover {
     letter-spacing: 2px;
 }
 
-ul a {
+nav ul a {
     font-size: smaller;
     font-weight: bold;
     color: white !important;
 }
 
-ul a.scroll {
+nav ul a.scroll {
     color: darkblue !important;
 }
 
-ul a:last-child {
+nav ul a:last-child {
     background-color: darkblue;
     color: white;
     padding: 0.8rem;
     border-radius: 2rem;
 }
 
-ul a:last-child.scroll {
+nav ul a:last-child.scroll {
     color: white !important;
 }
 
-ul a.active, ul a:hover {
+nav ul a.active, nav ul a:hover {
     border-radius: 2rem;
     padding: 0.5rem;
     font-size: medium;
@@ -438,6 +438,83 @@ video {
   transition: visibility 0.5s ease-in-out;
 }
 
+#message {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#message h1 {
+    color: darkblue;
+    text-decoration: underline;
+    text-decoration-color: darkblue;
+}
+
+#message h1:hover,  
+.seremon-list .seremon-title a:hover{
+    color: red;
+}
+
+#message .text-center {
+    display: flex;
+}
+
+#message .text-center a {
+    outline: 2px solid red;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    font-size: small;
+    letter-spacing: 2px;
+}
+
+#message .text-center a:hover {
+    font-size: medium;
+    outline: 2px solid red;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkblue;
+    letter-spacing: 2px;
+}
+
+.seremon-list {
+    list-style: none;
+}
+
+.seremon-list li {
+    display: flex;
+    gap: 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+    min-height: 70px;
+}
+
+.seremon-list li:first-child {
+    border-top: 1px solid #e5e5e5;
+}
+
+.seremon-list img {
+    /* position: absolute;
+    left: 0;
+    top: 10px; */
+}
+
+.seremon-detail {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.seremon-list .seremon-title {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.seremon-list .seremon-meta {
+    color: lightslategray;
+}
+
 
 @media screen and (max-width : 1025px) {
    header {
@@ -459,11 +536,6 @@ video {
 
     nav ul {
         display: none;
-        /* position: absolute;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        margin-top: 4rem; */
     }
 
     nav .fa-bars {
@@ -511,12 +583,6 @@ video {
     .project-sample.active {
         display: flex !important;
     }
-
-
-
-    /* .project .swiper-slide-duplicate {
-        display: none !important;
-    } */
     
     .project .see-events{
         display: block;
@@ -547,5 +613,12 @@ video {
 
     .gal-more h1 {
         font-size: xx-large;
+    }
+
+    .seremon-detail {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0.5rem;
     }
 }
