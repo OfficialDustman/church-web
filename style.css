@@ -110,6 +110,26 @@ section {
     width: 100%;
 }
 
+#home .swiper-slide {
+    display: flex;
+    align-items: center;
+}
+
+.home-text {
+    position: absolute;    
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: #007aff;
+}
+
 
 #events {
     display: flex;
@@ -518,12 +538,70 @@ video {
     color: lightslategray;
 }
 
+footer {
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    color: white;
+}
+
+.footer-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer-location, .footer-contact {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer-location p{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.phone, .mail{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.phone a, .mail a {
+  color: white;
+}
+
+.phone a:hover, .mail a:hover {
+  color: darkblue;
+}
 
 @media screen and (max-width : 1025px) {
    header {
         flex-direction: column;
         padding-bottom: 1rem;
    }
+
+    .home-text {
+        font-size: x-large;
+    }
 
 }
 
@@ -565,6 +643,12 @@ video {
 
     .swiper-slide img {
         height: 50vh;
+    }
+
+    .home-text {
+        font-size: large;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .project {
@@ -624,4 +708,14 @@ video {
         justify-content: center;
         gap: 0.5rem;
     }
+
+    .footer-details {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-location, .footer-contact {
+        width: 100%;
+    }
+
 }

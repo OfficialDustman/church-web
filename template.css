@@ -1,0 +1,30 @@
+header {
+    position: sticky;
+}
+
+nav ul a {
+    color: darkblue !important;
+}
+
+nav ul a:last-child {
+    color: white !important;
+}
+
+.cover-img {
+    background-image: url(./images/img-8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-title {
+    color: white;
+    font-size: xxx-large;
+    font-weight: bolder;
+    font-size: 6rem;
+}
