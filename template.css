@@ -28,3 +28,9 @@ nav ul a:last-child {
     font-weight: bolder;
     font-size: 6rem;
 }
+
+@media screen and (max-width : 765px) {
+    .page-title {
+        font-size: xxx-large;
+    }
+}
